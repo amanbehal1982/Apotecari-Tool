@@ -1,226 +1,380 @@
-ul, ul li, ol, ol li{
-    list-style: none;
-    margin:0;
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Medium.eot');
+    src: url('../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Medium.woff2') format('woff2'), url('../fonts/Montserrat-Medium.woff') format('woff'), url('../fonts/Montserrat-Medium.ttf') format('truetype'), url('../fonts/Montserrat-Medium.svg#Montserrat-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
 }
-a, input, label, button{
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.eot');
+    src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Regular.woff2') format('woff2'), url('../fonts/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat-Regular.ttf') format('truetype'), url('../fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.eot');
+    src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Bold.woff2') format('woff2'), url('../fonts/Montserrat-Bold.woff') format('woff'), url('../fonts/Montserrat-Bold.ttf') format('truetype'), url('../fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+ul,
+ul li,
+ol,
+ol li {
+    list-style: none;
+    margin: 0;
+}
+
+a {
+    outline: none !important;
+    text-decoration: none !important;
+}
+
+input,
+label,
+button {
     outline: none !important;
 }
-img{
-    max-width:100%;
+
+.form-control {
+    box-shadow: none !important;
+}
+
+img {
+    max-width: 100%;
     height: auto;
     border: none;
 }
-body{
-    font-family: Arial, Helvetica, sans-serif;
+
+body {
+    font-family: 'Montserrat';
     font-size: 1rem;
     line-height: 1.5;
     font-weight: normal;
 }
-header{
-    padding:21px 0 31px;
-}
-.banner-box{    
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-size: cover;
-    padding-bottom:222px;
-    position: relative;
-    padding-top: 125px;
-    height: 905px;
-}
-.banner-box.banner-img-01{
-    background-image: url('../images/banner-image-01.jpg');
-}
-.banner-box.banner-img-02{
-    background-image: url('../images/banner-image-02.jpg');
-}
-.banner-box.banner-img-03{
-    background-image: url('../images/banner-image-03.jpg');
-}
-.hidden-part{
-    position: absolute;
-    top:0;
-    left:0;
-    bottom:0;
-    right:0;
-    width:100%;
-    background: rgba(0,0,0,0.3);
-}
-.banner-box .form-check{
-    padding-left:15px;
-}
-.slider-outer{
-    position: relative;
-}
-.slider.slider-area{
-    position: relative;
-}
-.slick-dots{
-    padding:0;
-}
-.slick-dots li{
-    display: none;
-}
-.slick-dots li.slick-active{
-    display: block;
-}
-.slick-dots li{
-    color:#fff;
-}
-.slick-dots li a{
-    color:#fff;
-    font-size: 18px;
-    font-weight: bold;
-}
-.slider-outer .slide-part{
 
+header {
+    padding: 21px 0 31px;
 }
-.slider-outer .slide-part h2{
-    font-size: 26px;
-    color:#fff;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin-bottom:25px;
+
+.hair-health-outer {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    position: relative;
 }
-.slider-outer .slide-part h6{
-    color:#fff;
-    margin-bottom:8px;
-    letter-spacing: 1px;
-    padding-top:60px;
+
+.hair-health-outer.hair-screen-04 {
+    padding-top: 80px;
 }
-.slider-outer .slide-part .form-check{
-    position:relative;
-    margin-top:30px;
-    margin-right:0;
-}
-.slider-outer .slide-part .form-check .form-check-input{
+
+.hair-health-outer .blank-box {
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
     position: absolute;
-    top:0; left:0;
-    opacity:0;
-    visibility: hidden;
-}
-.slider-outer .slide-part .form-check .form-check-label{
-    background: transparent;
-    width:100%;
-    height:73px;
-    text-align: center;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 23px;
-    border:2px solid #fff;
-    margin:0;
-    color:#fff;
-    padding:23px 11px;
-    letter-spacing: 1px;
-    cursor: pointer;
-}
-.slider-outer .slide-part .form-check .form-check-input:checked ~ label{
-    background: #fff;
-    color:#000;
-}
-.arrow-outer-box{
-    position: absolute;
-    bottom:100px;
+    top: 0;
     left: 0;
-    width:100%;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
 }
-.arrow-outer-box .slick-arrow{
-    width:160px;
-    height:54px;
-    font-size: 18px;
-    line-height:24px;
-    letter-spacing: 1px;
-    border:2px solid #272828;
+
+.hair-screen-01 {
+    background-image: url(../images/screen01-img.jpg);
+}
+
+.hair-screen-02 {
+    background-image: url(../images/screen02-img.jpg);
+}
+
+.hair-screen-03 {
+    background-image: url(../images/screen03-img.jpg);
+}
+
+.hair-screen-04 {
+    background: #DFDAD7;
+}
+
+.screen-outer-box {
+    width: 100%;
+    max-width: 720px;
+}
+
+.screen-outer-box.screen-outer-box02 {
+    max-width: 100%;
+}
+
+.screen-outer-box.screen-outer-box03 {
+    max-width: 950px;
+}
+
+.screen-outer-box h1 {
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 1.2;
+    letter-spacing: -0.09px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.screen-outer-box p {
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 1.4;
+    letter-spacing: -0.07px;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.screen-outer-box.screen-outer-box03 h1,
+.screen-outer-box.screen-outer-box03 p {
+    color: #000;
+}
+
+.screen-outer-box p+p {
+    margin-top: 20px;
+}
+
+.screen-outer-box p a {
+    color: #fff;
+}
+
+.screen-outer-box p a:hover {
+    color: #fff;
+    text-decoration: underline !important;
+}
+
+.screen-outer-box.screen-outer-box03 p a {
+    color: #000;
+}
+
+.screen-outer-box.screen-outer-box03 p a:hover {
+    color: #000;
+    text-decoration: underline !important;
+}
+
+.screen-outer-box.screen-outer-box02 p {
+    font-size: 21px;
+    line-height: 1.2;
+}
+
+.screen-outer-box .video-box {
+    margin-bottom: 30px;
+}
+
+.video-box .hair-health {
+    display: block;
+    width: 100%;
+    max-width: 424px;
+    height: 206px;
+}
+
+.submit-button {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.submit-button a {
+    display: inline-block;
+    width: 157px;
+    height: auto;
     text-align: center;
-    background: #272828;
-    padding:13px;
-    color:#fff;
-    transition: all 0.5s ease 0;
-    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 34px;
+    letter-spacing: 0.54px;
+    color: #fff;
+    background: #242424;
+    padding: 10px;
+    transition: background 0.3s ease 0s;
 }
-.arrow-outer-box .slick-arrow .slick-next{
+
+.submit-button a:hover {
+    background: #080808;
 }
-.arrow-outer-box .slick-arrow:hover{
+
+.final-product-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.final-product-wrapper span {
+    display: block;
+    margin: 25px 0 0;
+}
+
+.final-product-wrapper span:last-child {
+    margin-left: 80px;
+}
+
+.email-notification-form {
+    margin-top: 40px;
+}
+
+.email-notification-form .form-control {
     background: transparent;
-    color:#fff;
-    border-color:#fff;
+    border: 1px solid #A5A4A3;
+    width: 100%;
+    max-width: 700px;
+    height: 54px;
+    padding: 4px 10px;
+    font-family: 'Montserrat';
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.07px;
+    text-align: center;
+    color: #000;
+    border-radius: 0;
+    display: inline-block;
+    vertical-align: top;
 }
-.arrow-outer-box .slick-arrow.slick-disabled{
-    display: none !important;
+
+.email-notification-form .send-btn {
+    display: inline-block;
+    width: 157px;
+    height: auto;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 34px;
+    letter-spacing: 0.54px;
+    color: #fff;
+    background: #242424;
+    padding: 10px;
+    transition: background 0.3s ease 0s;
+    border-radius: 0;
+    margin-left: 30px;
+    box-shadow: none !important;
+    border: 0 none;
+    vertical-align: top;
 }
-.dots-outer-box{
-    position: absolute;
-    top: 125px;
-    left:0;
-    width:100%;
+
+.email-notification-form .send-btn:hover {
+    background: #080808;
 }
 
 @media (max-width: 991.98px) {
-    .slider-outer .slide-part .form-check .form-check-label{
-        height: auto;
-        font-size:16px;
-        padding:18px 11px;
+    .hair-health-outer {
+        padding-top: 100px;
     }
-    .banner-box.banner-img-03{  
+    .screen-outer-box h1 {
+        font-size: 35px;
+    }
+    .screen-outer-box p {
+        font-size: 28px;
+    }
+    .hair-screen-03 {
         background-position: center top;
     }
- }
+    .email-notification-form .form-control {
+        max-width: 450px;
+        font-size: 28px;
+    }
+}
 
- @media (max-width: 767.98px) { 
-    .slider-outer .slide-part .form-check .form-check-label{
-        font-size:12px;
-        padding:12px 0;
+@media (max-width: 767.98px) {
+    .screen-outer-box h1 {
+        font-size: 30px;
     }
-    .banner-box{
-        height:815px;
+    .screen-outer-box p {
+        font-size: 22px;
     }
-    .arrow-outer-box .slick-arrow{
-        width:120px;
-        height: auto;
-        font-size: 14px;
-        padding:8px;
+    .submit-button a {
+        width: 120px;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 9px 10px;
     }
-  }
+    .screen-outer-box p+p {
+        margin-top: 15px;
+    }
+    .hair-health-outer.hair-screen-04 {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .final-product-wrapper {
+        flex-direction: column;
+    }
+    .final-product-wrapper span {
+        display: block;
+    }
+    .final-product-wrapper span:last-child {
+        margin-left: 0;
+    }
+    .email-notification-form {
+        margin-top: 30px;
+    }
+    .email-notification-form .form-control {
+        max-width: 65%;
+        height: 40px;
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .email-notification-form .send-btn {
+        line-height: 22px;
+        font-size: 16px;
+        padding: 9px 10px;
+        width: 120px;
+    }
+}
 
-  @media (max-width: 575.98px) {
-    header{
-        padding:15px 0;
+@media (max-width: 575.98px) {
+    header {
+        padding: 15px 0;
     }
-    .logo-part{
+    .logo-part {
         text-align: center;
     }
-    .arrow-outer-box .slick-arrow{
-        height: auto;
+    .screen-outer-box h1 {
+        font-size: 26px;
     }
-    .banner-box{
+    .screen-outer-box p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .screen-outer-box.screen-outer-box02 p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .hair-screen-01 {
+        background-position: left -250px top;
+    }
+    .hair-screen-02 {
         background-position: center top;
-        padding-top: 250px;
-        padding-bottom:150px;
-        height:870px;
     }
-    .banner-box.banner-img-01{
-        background-position: left -170px top;
+    .email-notification-form .form-control {
+        font-size: 18px;
     }
-    .banner-box .mobile-display{
-        margin-left:-5px;
-        margin-right:-5px;
+}
+
+@media (max-width: 479.98px) {
+    .video-box .hair-health {
+        height: 165px;
     }
-    .banner-box .mobile-display .form-check{
-        padding-left:5px;
-        padding-right:5px;
+    .email-notification-form .form-control {
+        max-width: 100%;
     }
-    .slider-outer .slide-part .form-check .form-check-label{
-        font-size: 8px;
-        padding: 8px 0;
+    .email-notification-form .send-btn {
+        margin-left: 0;
+        margin-top: 15px;
     }
-    .dots-outer-box{
-        top:25px;
+}
+
+@media (max-width: 359.98px) {
+    .video-box .hair-health {
+        height: 140px;
     }
-    .arrow-outer-box .slick-arrow{
-        width:100px;
-        font-size:12px;
-    }
-    .arrow-outer-box{
-        bottom:65px;
-    }
-  }
+}
